@@ -1,0 +1,74 @@
+AWS => EC2 => instances => launch instance => name => 
+quick start => AWS 
+instance type => (t3.micro)
+
+(checkbox to check)
+allow ssh traffic..
+allow https..
+allow http traffic.. 
+
+Launch instance [WITHOUR KEY-PAIR]
+
+Click on link (green)
+
+connect => connect => (Amazon Linux 2023 [BLACK SCREEN])
+ 
+sudo yum install docker // to install docker on AWS
+
+y/n = y
+
+(dockerhub container images => login)
+sudo docker login
+UN:
+Pass:
+
+sudo service docker start //
+
+sudo docker pull ubuntu //
+
+sudo docker images //
+
+
+sudo docker pull redis //
+
+sudo docker images
+
+sudo docker run redis //refresh //
+
+sudo docker ps // to get running imgs
+
+sudo docker ps -a //will get all imgs
+
+ 
+
+
+
+//create a new file  in AWS =>
+
+touch dockerfile //create new file 
+
+nano dockerfile //
+
+(inside that)
+
+FROM ubuntu
+RUN apt-get update
+
+ctrl+s ctrl+x
+
+
+cat dockerfile //
+
+chmod 777 dockerfile //change mod (read/write/excute)
+
+sudo docker build . // (if we get error try next command)
+sudo service docker start
+
+
+
+sudo docker build -tfilename . //
+
+sudo docker build -tfilename:1.0 . // to change file version
+
+AWS => instance => instance state => terminate => terminate(delete) => 
+ 
